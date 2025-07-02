@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  # Serviço do Backend (API)
+  app:
+    build: .
+    container_name: api 
+    ports:
+      - "8000:8000" # Mapeia a porta do host para o container
+    volumes:
+      - .:/app # Monta o código-fonte para live-reload em desenvolvimento
